@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node server.js"
+   
   },
   "name": "distributor",
   "version": "1.0.0",
