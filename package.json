@@ -15,8 +15,5 @@
   "main": "app.js",
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "netlify-cli": "^15.6.0"
-  }
+  "description": ""
 }
