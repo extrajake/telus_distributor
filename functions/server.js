@@ -5,7 +5,7 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 
-const router = express.Router()
+// const router = express.Router()
 
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -41,6 +41,6 @@ app.listen(3000, function(){
     console.log('server is running on port 3000.');
 })
 
-app.use("/.netlify/functions/server", router);
+// app.use("/.netlify/functions/server", router);
 
 module.exports.handler = serverless(app);
