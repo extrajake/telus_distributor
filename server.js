@@ -1,8 +1,10 @@
 const express = require('express');
 const serverless = require('serverless-http')
-const bodyParser = require('body-parser');
+
 
 const app = express();
+const bodyParser = require('body-parser');
+
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static(__dirname + '/public'));
