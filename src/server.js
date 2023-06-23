@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/promo1.html", function(req, res){
+app.post("/", function(req, res){
     const codes = ["1NKCI", "V3L7R", "60HPC", "8SF6L", "AHG08"]
     const codes2 = ["2WEMV", "KWWNI", "XNB7X", "6BN2T", "Y2FOK"]
     const codes3 = ["YJYZL", "6HNP2", "V9FF8", "8SF5L", "5B23I"]
