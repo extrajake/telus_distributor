@@ -2,7 +2,6 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "netlify-cli": "^15.6.0",
     "netlify-lambda": "^2.0.16",
     "node": "^20.2.0",
     "serverless-http": "^3.2.0"
@@ -10,12 +9,14 @@
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "./node_modules/.bin/netlify-lambda build src"
-   
   },
   "name": "distributor",
   "version": "1.0.0",
   "main": "app.js",
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "netlify-cli": "^15.6.0"
+  }
 }
