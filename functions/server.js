@@ -18,7 +18,7 @@ app.get("/index", function(req, res) {
 
 
 
-app.post("", function(req, res){
+app.post("/", urlencodedParser, function(req, res){
 
 const codes = ["1NKCI", "V3L7R", "60HPC", "8SF6L", "AHG08"]
 const codes2 = ["2WEMV", "KWWNI", "XNB7X", "6BN2T", "Y2FOK"]
@@ -27,7 +27,7 @@ const codes4 = ["UVUNU", "1N5UL", "IINVK", "AEZNP", "HM2NM"]
 const codes5 = ["KGFIA", "XI28K", "2QQ8K", "9Y4HK", "DMQJT"]
 
     if (codes.includes(req.body.field)) {
-        res.redirect("https://main--musical-manatee-2e343b.netlify.app/promo1.html");
+        res.redirect("/promo1.html");
     } else if (codes2.includes(req.body.field)) {
         res.sendFile(__dirname + "/promo2.html");
     } else if (codes3.includes(req.body.field)) {
