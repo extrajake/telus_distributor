@@ -18,7 +18,7 @@ app.get("/index", function(req, res) {
 
 
 
-app.post("/", urlencodedParser, function(req, res){
+app.post("/index", urlencodedParser, function(req, res){
 
 const codes = ["1NKCI", "V3L7R", "60HPC", "8SF6L", "AHG08"]
 const codes2 = ["2WEMV", "KWWNI", "XNB7X", "6BN2T", "Y2FOK"]
