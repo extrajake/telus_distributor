@@ -1,10 +1,8 @@
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
+[build]
+  command = "npm install && npm run build" # Adjust this command if you have a build step
+  functions = "functions" # Adjust this directory name if needed
 
 [[redirects]]
-  force = true
-  from = "/server/*"
+  from = "/*"
+  to = "/index.html"
   status = 200
-  to = "/.netlify/functions/server/:splat"
-
