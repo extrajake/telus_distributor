@@ -24,15 +24,15 @@ app.post("/", function(req, res){
     const codes5 = ["KGFIA", "XI28K", "2QQ8K", "9Y4HK", "DMQJT"]
 
     if (codes.includes(req.body.field)) {
-        res.sendFile(__dirname + "/promo1.html");
+        res.sendFile(__dirname + "./promo1.html");
     } else if (codes2.includes(req.body.field)) {
-        res.sendFile(__dirname + "/promo2.html");
+        res.sendFile(__dirname + "./promo2.html");
     } else if (codes3.includes(req.body.field)) {
-        res.sendFile(__dirname + "/promo3.html");
+        res.sendFile(__dirname + "./promo3.html");
     } else if (codes4.includes(req.body.field)) {
-        res.sendFile(__dirname + "/promo4.html");
+        res.sendFile(__dirname + "./promo4.html");
     } else if (codes5.includes(req.body.field)) {
-        res.sendFile(__dirname + "/promo5.html");
+        res.sendFile(__dirname + "./promo5.html");
     } else {
         res.send("The code is invalid");
     }
