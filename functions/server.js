@@ -24,7 +24,7 @@ app.post("/", function(req, res){
     const codes5 = ["KGFIA", "XI28K", "2QQ8K", "9Y4HK", "DMQJT"]
 
     if (codes.includes(req.body.field)) {
-        res.redirect(307, "/promo1");
+        res.redirect("/promo1");
     } else if (codes2.includes(req.body.field)) {
         res.sendFile(__dirname + "/promo2.html");
     } else if (codes3.includes(req.body.field)) {
