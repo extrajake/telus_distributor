@@ -16,7 +16,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", function(req, res){
+app.post("/functions/server.js", function(req, res){
     const codes = ["1NKCI", "V3L7R", "60HPC", "8SF6L", "AHG08"]
     const codes2 = ["2WEMV", "KWWNI", "XNB7X", "6BN2T", "Y2FOK"]
     const codes3 = ["YJYZL", "6HNP2", "V9FF8", "8SF5L", "5B23I"]
@@ -24,7 +24,7 @@ app.post("/", function(req, res){
     const codes5 = ["KGFIA", "XI28K", "2QQ8K", "9Y4HK", "DMQJT"]
 
     if (codes.includes(req.body.field)) {
-        res.redirect("/promo1");
+        res.redirect("/promo1.html");
     } else if (codes2.includes(req.body.field)) {
         res.sendFile(__dirname + "/promo2.html");
     } else if (codes3.includes(req.body.field)) {
