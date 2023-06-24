@@ -27,7 +27,7 @@ const codes4 = ["UVUNU", "1N5UL", "IINVK", "AEZNP", "HM2NM"]
 const codes5 = ["KGFIA", "XI28K", "2QQ8K", "9Y4HK", "DMQJT"]
 
     if (codes.includes(req.body.field)) {
-        res.redirect("/promo1.html");
+        res.redirect("https://main--musical-manatee-2e343b.netlify.app/promo1.html");
     } else if (codes2.includes(req.body.field)) {
         res.sendFile(__dirname + "/promo2.html");
     } else if (codes3.includes(req.body.field)) {
