@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build" # Adjust this command if you have a build step
+  
   functions = "functions" # Adjust this directory name if needed
 
 [[redirects]]
