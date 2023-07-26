@@ -9,6 +9,41 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Static files
 app.use(express.static(__dirname + '/public'));
 
+const apiKey = 'pat-na1-70302af9-f0f7-4814-96cd-f3648b8f4eca';
+const companiesEndpoint = 'https://api.hubapi.com/companies/v3/companies';
+
+// Parameters for the request (if you want to filter or limit the results)
+const params = {
+  limit: 100, // Adjust the limit as needed to fetch more or fewer companies per request
+  // Add any other parameters you need here
+};
+
+const queryParams = new URLSearchParams(params);
+const url = `${companiesEndpoint}?${queryParams.toString()}`;
+
+fetch(url, {
+  headers: {
+    Authorization: `Bearer ${apiKey}`,
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    // Log the list of companies to the console
+    console.log(data);
+
+    // If you want to see specific properties of the companies, you can access them like this:
+    data.companies.forEach(company => {
+      console.log('Company Name:', company.properties.name);
+      console.log('Company ID:', company.id);
+      // Add more properties as needed
+    });
+  })
+  .catch(error => {
+    console.error('Error fetching companies:', error);
+  });
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
